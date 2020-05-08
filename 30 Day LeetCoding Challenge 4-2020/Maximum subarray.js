@@ -1,3 +1,4 @@
+/*
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
 Example:
@@ -8,20 +9,21 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 Follow up:
 
 If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+*/
 
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
-    let max = nums[0]
-    let temp = nums[0]
-    
-    for(let i = 1; i < nums.length; i++){
-        temp = Math.max(nums[i], temp + nums[i])
-        
-        if(temp > max) max = temp
-    }
-    
-    return max
+var maxSubArray = function (nums) {
+  let max = nums[0];
+  let temp = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    temp = Math.max(nums[i], temp + nums[i]);
+
+    if (temp > max) max = temp;
+  }
+
+  return max;
 };
